@@ -1,0 +1,19 @@
+//
+//  Networking.swift
+//  Networking
+//
+//  Created by Faizan Ellahi on 3/27/19.
+//  Copyright © 2019 FaizanEllahi. All rights reserved.
+//
+
+import Foundation
+
+
+
+protocol Networking {
+    
+    func responseDecodable(_ urlRequest: RequestConvertible) -> DecodableRequest
+    func update(withHeaders headers: Headers)
+    func download(_ urlRequest: RequestConvertible) -> DownloadableRequest
+    func upload(file url: URL, with urlRequest: RequestConvertible) -> UploadableRequest
+}

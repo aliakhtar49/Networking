@@ -19,19 +19,19 @@ public protocol Routable {
 }
 
 /// Allows a route to perform the `.get` method
-public protocol RxReadable: Routable {}
+public protocol Readable: Routable {}
 
 /// Allows a route to perform the `.post` method
-public protocol RxCreatable: Routable {}
+public protocol Creatable: Routable {}
 
 /// Allows a route to perform the `.put` method
-public protocol RxUpdatable: Routable {}
+public protocol Updatable: Routable {}
 
 /// Allows a route to perform the `.delete` method
-public protocol RxDeletable: Routable {}
+public protocol Deletable: Routable {}
 
 /// Allows a route to perform the `.patch` method
-public protocol RxPatchable: Routable {}
+public protocol Patchable: Routable {}
 
 extension Routable {
 
@@ -56,7 +56,7 @@ public enum HTTPMethod: String {
     case patch   = "PATCH"
 }
 
-public extension RxReadable {
+public extension Readable {
 
     /// Method that allows route to return an object
     ///
@@ -72,7 +72,7 @@ public extension RxReadable {
     }
 }
 
-public extension RxCreatable {
+public extension Creatable {
 
     /// Method that allows route to create an object
     ///
@@ -89,7 +89,7 @@ public extension RxCreatable {
     }
 }
 
-public extension RxUpdatable {
+public extension Updatable {
 
     /// Method that allows route to update an object
     ///
@@ -104,7 +104,7 @@ public extension RxUpdatable {
     }
 }
 
-public extension RxPatchable {
+public extension Patchable {
     
     /// Method that allows route to update an object
     ///
@@ -119,7 +119,7 @@ public extension RxPatchable {
     }
 }
 
-public extension RxDeletable {
+public extension Deletable {
 
     /// Method that allows route to delete an object
     ///

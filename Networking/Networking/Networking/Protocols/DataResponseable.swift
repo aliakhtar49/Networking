@@ -12,4 +12,5 @@ import Foundation
 protocol DataResponseable {
     
     typealias DataResponseHandler<T> = (DataResponseModel<T>) -> Void
+    typealias ResultHandler<T> = (ResultType<T>) -> Void
 }

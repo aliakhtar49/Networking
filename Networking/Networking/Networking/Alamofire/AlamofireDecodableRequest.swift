@@ -18,7 +18,6 @@ extension Alamofire.DataRequest: DecodableRequest {
     
     func responseDecodable<T>(completionHandler: @escaping (DataResponseHandler<T>)) where T : Decodable {
         
-        
         response { (dataResponse) in
             
             guard let data = dataResponse.data else {

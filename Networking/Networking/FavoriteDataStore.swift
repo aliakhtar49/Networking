@@ -26,7 +26,7 @@ extension FavoriteDataStore: FavoriteDataStoreProtocol {
     func getFavorites(params: [String: String], completion: @escaping (ResultType<FavoriteDTO>) -> Void) {
         
         let router = URLRouters.Favorites.get(parameters: params)
-        let request = networking.responseDecodable(router)
+        let request = networking.response(router)
         
         request.responseDecodable { (response: DataResponseModel<FavoriteDTO>) in
             

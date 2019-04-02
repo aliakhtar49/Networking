@@ -16,7 +16,6 @@ extension Alamofire.DownloadRequest: DownloadableRequest {
         //Check
     }
     
-    
     func response(completion: @escaping DownloadResponseClosure, progress: @escaping DownloadProgressClosure) {
         
         response { (response) in
@@ -33,7 +32,6 @@ extension Alamofire.DownloadRequest: DownloadableRequest {
         
        // download(resumingWith: data).response(completion: completion, progress: progress) //Check
     }
-    
 }
 
 

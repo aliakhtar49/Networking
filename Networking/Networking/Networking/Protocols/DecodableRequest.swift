@@ -12,7 +12,6 @@ import Foundation
 protocol DecodableRequest: DataResponseable, CancelableRequest {
     
     func responseDecodable<T: Codable>(completionHandler: @escaping DataResponseHandler<T>)
-    
 }
 
 

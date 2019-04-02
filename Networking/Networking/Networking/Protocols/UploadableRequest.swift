@@ -18,7 +18,6 @@ protocol UploadableRequest: CancelableRequest {
     func response(completion: @escaping UploadResponseClosure, progress: @escaping UploadProgressClosure)
 }
 
-
 protocol UploadResponse {
     var data: Data? { get }
     var error: Error? { get }

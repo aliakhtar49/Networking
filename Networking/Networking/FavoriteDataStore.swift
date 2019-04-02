@@ -14,8 +14,10 @@ protocol FavoriteDataStoreProtocol: DataResponseable {
 
 class FavoriteDTO: Codable {
     
-    
-    
+    var userId: Int
+    var id: Int
+    var title: String
+    var completed: Bool
 }
 
 final class FavoriteDataStore: BaseDataStore {}
@@ -25,7 +27,7 @@ extension FavoriteDataStore: FavoriteDataStoreProtocol {
     
     func getFavorites(params: [String: String], completion: @escaping (ResultType<FavoriteDTO>) -> Void) {
         
-        let router = URLRouters.Favorites.get(parameters: params)
+        let router = URLRouters.Favorites.get()
         let request = networking.response(router)
         
         request.responseDecodable { (response: DataResponseModel<FavoriteDTO>) in

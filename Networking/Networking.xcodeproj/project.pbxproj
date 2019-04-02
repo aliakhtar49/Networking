@@ -11,6 +11,8 @@
 		F906E97C22536528002FE3DA /* URLRouters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906E97B22536528002FE3DA /* URLRouters.swift */; };
 		F906E97E2253662F002FE3DA /* BaseDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906E97D2253662F002FE3DA /* BaseDataStore.swift */; };
 		F906E980225366F0002FE3DA /* FavoriteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906E97F225366F0002FE3DA /* FavoriteDataStore.swift */; };
+		F906E98A22537E5B002FE3DA /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906E98922537E5B002FE3DA /* NetworkingTests.swift */; };
+		F906E99222538035002FE3DA /* ReadableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906E99122538035002FE3DA /* ReadableTests.swift */; };
 		F9327E8F224B8A1E00D5549E /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9327E8E224B8A1E00D5549E /* Networking.swift */; };
 		F9327E92224B8FF000D5549E /* DataResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9327E91224B8FF000D5549E /* DataResponseModel.swift */; };
 		F9327E95224B904100D5549E /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9327E94224B904100D5549E /* NetworkErrors.swift */; };
@@ -32,6 +34,16 @@
 		F9D8E0FF2251D63200979A73 /* AlamofireUploadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D8E0FE2251D63200979A73 /* AlamofireUploadRequest.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F906E98C22537E5B002FE3DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F95EA5CF2245028E00D35DE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F95EA5D62245028F00D35DE7;
+			remoteInfo = Networking;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		6909FDD7D22375B39EB2B3E0 /* Pods-Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.debug.xcconfig"; path = "Target Support Files/Pods-Networking/Pods-Networking.debug.xcconfig"; sourceTree = "<group>"; };
 		6BF0FE02145F50851B474C9E /* Pods_Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +51,10 @@
 		F906E97B22536528002FE3DA /* URLRouters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRouters.swift; sourceTree = "<group>"; };
 		F906E97D2253662F002FE3DA /* BaseDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataStore.swift; sourceTree = "<group>"; };
 		F906E97F225366F0002FE3DA /* FavoriteDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDataStore.swift; sourceTree = "<group>"; };
+		F906E98722537E5B002FE3DA /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F906E98922537E5B002FE3DA /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
+		F906E98B22537E5B002FE3DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F906E99122538035002FE3DA /* ReadableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadableTests.swift; sourceTree = "<group>"; };
 		F9327E8E224B8A1E00D5549E /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		F9327E91224B8FF000D5549E /* DataResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResponseModel.swift; sourceTree = "<group>"; };
 		F9327E94224B904100D5549E /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
@@ -63,6 +79,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F906E98422537E5B002FE3DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F95EA5D42245028F00D35DE7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -89,6 +112,16 @@
 				6C18A5F3B69C443071A1870F /* Pods-Networking.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F906E98822537E5B002FE3DA /* NetworkingTests */ = {
+			isa = PBXGroup;
+			children = (
+				F906E98922537E5B002FE3DA /* NetworkingTests.swift */,
+				F906E98B22537E5B002FE3DA /* Info.plist */,
+				F906E99122538035002FE3DA /* ReadableTests.swift */,
+			);
+			path = NetworkingTests;
 			sourceTree = "<group>";
 		};
 		F9327E8D224B89DA00D5549E /* Protocols */ = {
@@ -125,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				F95EA5D92245028F00D35DE7 /* Networking */,
+				F906E98822537E5B002FE3DA /* NetworkingTests */,
 				F95EA5D82245028F00D35DE7 /* Products */,
 				5F5B746A23E8F27FE197FE82 /* Pods */,
 				31F04AE8A6FCD3459F202FB9 /* Frameworks */,
@@ -135,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				F95EA5D72245028F00D35DE7 /* Networking.app */,
+				F906E98722537E5B002FE3DA /* NetworkingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,6 +217,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F906E98622537E5B002FE3DA /* NetworkingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F906E98E22537E5B002FE3DA /* Build configuration list for PBXNativeTarget "NetworkingTests" */;
+			buildPhases = (
+				F906E98322537E5B002FE3DA /* Sources */,
+				F906E98422537E5B002FE3DA /* Frameworks */,
+				F906E98522537E5B002FE3DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F906E98D22537E5B002FE3DA /* PBXTargetDependency */,
+			);
+			name = NetworkingTests;
+			productName = NetworkingTests;
+			productReference = F906E98722537E5B002FE3DA /* NetworkingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F95EA5D62245028F00D35DE7 /* Networking */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F95EA5E92245029000D35DE7 /* Build configuration list for PBXNativeTarget "Networking" */;
@@ -211,6 +264,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = FaizanEllahi;
 				TargetAttributes = {
+					F906E98622537E5B002FE3DA = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = F95EA5D62245028F00D35DE7;
+					};
 					F95EA5D62245028F00D35DE7 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -230,11 +287,19 @@
 			projectRoot = "";
 			targets = (
 				F95EA5D62245028F00D35DE7 /* Networking */,
+				F906E98622537E5B002FE3DA /* NetworkingTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F906E98522537E5B002FE3DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F95EA5D52245028F00D35DE7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -295,6 +360,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F906E98322537E5B002FE3DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F906E98A22537E5B002FE3DA /* NetworkingTests.swift in Sources */,
+				F906E99222538035002FE3DA /* ReadableTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F95EA5D32245028F00D35DE7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -323,6 +397,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F906E98D22537E5B002FE3DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F95EA5D62245028F00D35DE7 /* Networking */;
+			targetProxy = F906E98C22537E5B002FE3DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		F95EA5DE2245028F00D35DE7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -343,6 +425,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F906E98F22537E5B002FE3DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4NEE4X89FR;
+				INFOPLIST_FILE = NetworkingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.FaizanEllahi.NetworkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Networking.app/Networking";
+			};
+			name = Debug;
+		};
+		F906E99022537E5B002FE3DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4NEE4X89FR;
+				INFOPLIST_FILE = NetworkingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.FaizanEllahi.NetworkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Networking.app/Networking";
+			};
+			name = Release;
+		};
 		F95EA5E72245029000D35DE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -500,6 +622,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F906E98E22537E5B002FE3DA /* Build configuration list for PBXNativeTarget "NetworkingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F906E98F22537E5B002FE3DA /* Debug */,
+				F906E99022537E5B002FE3DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F95EA5D22245028E00D35DE7 /* Build configuration list for PBXProject "Networking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

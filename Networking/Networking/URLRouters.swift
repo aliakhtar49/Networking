@@ -18,7 +18,7 @@ struct URLRouters {
     
     
     struct Favorites: Readable, Creatable {
-        var route: String = "favourites/places"
+        var route: String = "https://jsonplaceholder.typicode.com/todos/1"
     }
     
     

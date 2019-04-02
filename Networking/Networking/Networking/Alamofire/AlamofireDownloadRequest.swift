@@ -13,14 +13,14 @@ import Alamofire
 extension Alamofire.DownloadRequest: DownloadableRequest {
     
     func cancel() {
-        //Check
+        let _ : Alamofire.DownloadRequest = cancel()
     }
     
     func response(completion: @escaping DownloadResponseClosure, progress: @escaping DownloadProgressClosure) {
         
         response { (response) in
             
-            let downloadResponse = response as! DownloadResponse //Check
+            let downloadResponse = response as DownloadResponse
             completion(downloadResponse)
             
             }.downloadProgress { (downloadProgress) in
@@ -29,13 +29,13 @@ extension Alamofire.DownloadRequest: DownloadableRequest {
     }
     
     func resume(data: Data, completion: @escaping DownloadResponseClosure, progress: @escaping DownloadProgressClosure) {
-        
        // download(resumingWith: data).response(completion: completion, progress: progress) //Check
     }
+    
 }
 
-
-//Check
-//extension Alamofire.DefaultDownloadResponse: DownloadResponse {
-//
-//}
+extension Alamofire.DownloadResponse: DownloadResponse {
+    var destinationURL: URL? {
+        return fileURL
+    }
+}

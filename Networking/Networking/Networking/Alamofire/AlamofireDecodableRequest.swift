@@ -13,10 +13,11 @@ import Alamofire
 extension Alamofire.DataRequest: DecodableRequest {
    
     func cancel() {
-        
+        let _ : Alamofire.DataRequest = cancel()
     }
     
     func responseDecodable<T>(completionHandler: @escaping (DataResponseHandler<T>)) where T : Decodable {
+        
         
         response { (dataResponse) in
             
@@ -25,7 +26,6 @@ extension Alamofire.DataRequest: DecodableRequest {
                 completionHandler(response)
                 return
             }
-            
             do {
                 
                 let value: T = try JSONDecoder().decode(T.self, from: data)

@@ -16,17 +16,26 @@ extension Alamofire.DataRequest: DecodableRequest {
         let _ : Alamofire.DataRequest = cancel()
     }
     
+      private func convertResponseToDataResponseModel<T>(dataResponse : DataResponse<T>) ->
+            DataResponseModel<T> {
+            
+                switch (dataResponse.value,dataResponse.error) {
+                    
+                case let (.some(value), nil):
+                   return  DataResponseModel<T>(result: .success(value))
+                    
+               case let (nil, .some(error)):
+                  return  DataResponseModel<T>(result: .failure(NetworkErrors.underlying(error)))
+    
+                default:
+                    let error = NSError(domain:NSURLErrorDomain, code:NSURLErrorUnknown, userInfo:nil)
+                     return  DataResponseModel<T>(result: .failure(NetworkErrors.underlying(error)))
+                }
+    }
     func responseDecodable<T>(completionHandler: @escaping (DataResponseHandler<T>)) where T : Decodable {
         
         responseDecodable { (dataResponse : DataResponse<T>) in
-            
-            guard let value = dataResponse.result.value else {
-                let response = DataResponseModel<T>(result: .failure(dataResponse.error as! NetworkErrors))
-                completionHandler(response)
-                return
-            }
-            let response = DataResponseModel<T>(result: .success(value))
-            completionHandler(response)
+            completionHandler(self.convertResponseToDataResponseModel(dataResponse: dataResponse))
         }
     }
 }

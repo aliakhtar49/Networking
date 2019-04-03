@@ -79,6 +79,7 @@ public enum NetworkErrors: Error {
     case responseValidationFailed(reason: ResponseValidationFailureReason)
     case responseSerializationFailed(reason: ResponseSerializationFailureReason)
     case internetConnectionFailed(reason: internetConnectionFailureReason)
+    case underlying(Swift.Error)
 }
 
 // MARK: - Error Descriptions
@@ -99,7 +100,10 @@ extension NetworkErrors: LocalizedError {
             return reason.localizedDescription
         case .internetConnectionFailed(let reason):
             return reason.localizedDescription
+        case .underlying(let error):
+            return error.localizedDescription
         }
+        
     }
 }
 

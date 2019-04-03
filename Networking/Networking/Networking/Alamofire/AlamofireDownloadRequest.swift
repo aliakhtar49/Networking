@@ -27,7 +27,7 @@ extension Alamofire.DownloadRequest: DownloadableRequest {
     
     
     func resume(data: Data, completion: @escaping DownloadResponseClosure, progress: @escaping DownloadProgressClosure) {
-       // download(resumingWith: data).response(completion: completion, progress: progress) //Check
+            
     }
     
     

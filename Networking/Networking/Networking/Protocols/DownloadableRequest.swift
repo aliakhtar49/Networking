@@ -12,7 +12,8 @@ import Foundation
 typealias DownloadResponseClosure = (DownloadResponse) -> Void
 typealias DownloadProgressClosure = (Double) -> Void
 
-protocol DownloadableRequest: CancelableRequest {
+protocol DownloadableRequest: Request {
+    
     func response(completion: @escaping DownloadResponseClosure, progress: @escaping DownloadProgressClosure)
     func resume(data: Data, completion: @escaping DownloadResponseClosure, progress: @escaping DownloadProgressClosure)
 }

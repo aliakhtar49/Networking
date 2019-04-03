@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51148A2E22539A540087A0AB /* ValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51148A2D22539A540087A0AB /* ValidationType.swift */; };
+		51148A3022539D790087A0AB /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51148A2F22539D790087A0AB /* Request.swift */; };
 		9323EC54050B994083D0CF4E /* Pods_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF0FE02145F50851B474C9E /* Pods_Networking.framework */; };
 		F906E97C22536528002FE3DA /* URLRouters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906E97B22536528002FE3DA /* URLRouters.swift */; };
 		F906E97E2253662F002FE3DA /* BaseDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906E97D2253662F002FE3DA /* BaseDataStore.swift */; };
@@ -29,7 +31,6 @@
 		F9D8E0F32251B33100979A73 /* DecodableRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D8E0F22251B33100979A73 /* DecodableRequest.swift */; };
 		F9D8E0F52251B47C00979A73 /* DownloadableRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D8E0F42251B47C00979A73 /* DownloadableRequest.swift */; };
 		F9D8E0F72251B4E200979A73 /* UploadableRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D8E0F62251B4E200979A73 /* UploadableRequest.swift */; };
-		F9D8E0F92251C19900979A73 /* CancelableRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D8E0F82251C19900979A73 /* CancelableRequest.swift */; };
 		F9D8E0FB2251D60600979A73 /* AlamofireDecodableRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D8E0FA2251D60600979A73 /* AlamofireDecodableRequest.swift */; };
 		F9D8E0FD2251D61F00979A73 /* AlamofireDownloadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D8E0FC2251D61F00979A73 /* AlamofireDownloadRequest.swift */; };
 		F9D8E0FF2251D63200979A73 /* AlamofireUploadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D8E0FE2251D63200979A73 /* AlamofireUploadRequest.swift */; };
@@ -46,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51148A2D22539A540087A0AB /* ValidationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationType.swift; sourceTree = "<group>"; };
+		51148A2F22539D790087A0AB /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		6909FDD7D22375B39EB2B3E0 /* Pods-Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.debug.xcconfig"; path = "Target Support Files/Pods-Networking/Pods-Networking.debug.xcconfig"; sourceTree = "<group>"; };
 		6BF0FE02145F50851B474C9E /* Pods_Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C18A5F3B69C443071A1870F /* Pods-Networking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.release.xcconfig"; path = "Target Support Files/Pods-Networking/Pods-Networking.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,7 +77,6 @@
 		F9D8E0F22251B33100979A73 /* DecodableRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableRequest.swift; sourceTree = "<group>"; };
 		F9D8E0F42251B47C00979A73 /* DownloadableRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadableRequest.swift; sourceTree = "<group>"; };
 		F9D8E0F62251B4E200979A73 /* UploadableRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadableRequest.swift; sourceTree = "<group>"; };
-		F9D8E0F82251C19900979A73 /* CancelableRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelableRequest.swift; sourceTree = "<group>"; };
 		F9D8E0FA2251D60600979A73 /* AlamofireDecodableRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireDecodableRequest.swift; sourceTree = "<group>"; };
 		F9D8E0FC2251D61F00979A73 /* AlamofireDownloadRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireDownloadRequest.swift; sourceTree = "<group>"; };
 		F9D8E0FE2251D63200979A73 /* AlamofireUploadRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireUploadRequest.swift; sourceTree = "<group>"; };
@@ -107,6 +109,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		51148A2C22539A270087A0AB /* ValidationType */ = {
+			isa = PBXGroup;
+			children = (
+				51148A2D22539A540087A0AB /* ValidationType.swift */,
+			);
+			path = ValidationType;
+			sourceTree = "<group>";
+		};
 		5F5B746A23E8F27FE197FE82 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,10 +142,10 @@
 				F9327E96224B90F900D5549E /* DataResponseable.swift */,
 				F9327E8E224B8A1E00D5549E /* Networking.swift */,
 				F95EA5ED22450FA700D35DE7 /* RoutersProtocol.swift */,
+				51148A2F22539D790087A0AB /* Request.swift */,
 				F9D8E0F22251B33100979A73 /* DecodableRequest.swift */,
 				F9D8E0F42251B47C00979A73 /* DownloadableRequest.swift */,
 				F9D8E0F62251B4E200979A73 /* UploadableRequest.swift */,
-				F9D8E0F82251C19900979A73 /* CancelableRequest.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -201,6 +211,7 @@
 				F9327E90224B8F5000D5549E /* Commom */,
 				F9327E93224B901800D5549E /* Error */,
 				F9327E8D224B89DA00D5549E /* Protocols */,
+				51148A2C22539A270087A0AB /* ValidationType */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -376,9 +387,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51148A2E22539A540087A0AB /* ValidationType.swift in Sources */,
 				F9D8E0FD2251D61F00979A73 /* AlamofireDownloadRequest.swift in Sources */,
 				F9D8E0F72251B4E200979A73 /* UploadableRequest.swift in Sources */,
 				F95EA5F12245100700D35DE7 /* AlamofireManager.swift in Sources */,
+				51148A3022539D790087A0AB /* Request.swift in Sources */,
 				F9D8E0F32251B33100979A73 /* DecodableRequest.swift in Sources */,
 				F95EA5F32245103B00D35DE7 /* AlamofireRequestConverter.swift in Sources */,
 				F9D8E0FF2251D63200979A73 /* AlamofireUploadRequest.swift in Sources */,
@@ -392,7 +405,6 @@
 				F9D8E0F52251B47C00979A73 /* DownloadableRequest.swift in Sources */,
 				F9327E8F224B8A1E00D5549E /* Networking.swift in Sources */,
 				F9327E95224B904100D5549E /* NetworkErrors.swift in Sources */,
-				F9D8E0F92251C19900979A73 /* CancelableRequest.swift in Sources */,
 				F9327E97224B90F900D5549E /* DataResponseable.swift in Sources */,
 				F95EA5EE22450FA700D35DE7 /* RoutersProtocol.swift in Sources */,
 				F95EA5DB2245028F00D35DE7 /* AppDelegate.swift in Sources */,

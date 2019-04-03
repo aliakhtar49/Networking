@@ -11,31 +11,23 @@ import Alamofire
 
 
 extension Alamofire.DataRequest: DecodableRequest {
-   
-    func cancel() {
-        let _ : Alamofire.DataRequest = cancel()
-    }
-    
+
     func responseDecodable<T>(completionHandler: @escaping (DataResponseHandler<T>)) where T : Decodable {
         
-        response { (dataResponse) in
+        responseDecodable { (dataResponse : DataResponse<T>) in
             
-            guard let data = dataResponse.data else {
-                let response = DataResponseModel<T>(result: .failure(dataResponse.error as! NetworkErrors))//DataResponse<T>(value: nil, error: dataResponse.error)
+            guard let value = dataResponse.result.value else {
+                let response = DataResponseModel<T>(result: .failure(dataResponse.error as! NetworkErrors))
                 completionHandler(response)
                 return
             }
-            do {
-                
-                let value: T = try JSONDecoder().decode(T.self, from: data)
-                let response = DataResponseModel<T>(result: .success(value))
-                completionHandler(response)
-                
-            } catch {
-                
-                let response = DataResponseModel<T>(result: .failure(error as! NetworkErrors))
-                completionHandler(response)
-            }
+            let response = DataResponseModel<T>(result: .success(value))
+            completionHandler(response)
         }
     }
+    
+    func validate(validationType: ValidationType) {
+        validate(statusCode: validationType.statusCodes)
+    }
+    
 }

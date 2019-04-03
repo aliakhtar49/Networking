@@ -139,7 +139,7 @@ public extension Deletable {
 /// Protocol that conforms to URLRequestConvertible to all Alamofire integration
 public protocol RequestConvertible {
     var method: HTTPMethod {get set}
-    var route: String {get set}
+    var route: String { get set}
     var parameters: Parameters {get set}
     var headers: [String: String]? {get set}
     var timeout: CFTimeInterval {get set}

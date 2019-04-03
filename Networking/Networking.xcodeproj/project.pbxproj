@@ -13,6 +13,7 @@
 		F906E980225366F0002FE3DA /* FavoriteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906E97F225366F0002FE3DA /* FavoriteDataStore.swift */; };
 		F906E98A22537E5B002FE3DA /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906E98922537E5B002FE3DA /* NetworkingTests.swift */; };
 		F906E99222538035002FE3DA /* ReadableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906E99122538035002FE3DA /* ReadableTests.swift */; };
+		F906E9942253DF46002FE3DA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906E9932253DF46002FE3DA /* NetworkManager.swift */; };
 		F9327E8F224B8A1E00D5549E /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9327E8E224B8A1E00D5549E /* Networking.swift */; };
 		F9327E92224B8FF000D5549E /* DataResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9327E91224B8FF000D5549E /* DataResponseModel.swift */; };
 		F9327E95224B904100D5549E /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9327E94224B904100D5549E /* NetworkErrors.swift */; };
@@ -55,6 +56,7 @@
 		F906E98922537E5B002FE3DA /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		F906E98B22537E5B002FE3DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F906E99122538035002FE3DA /* ReadableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadableTests.swift; sourceTree = "<group>"; };
+		F906E9932253DF46002FE3DA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F9327E8E224B8A1E00D5549E /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		F9327E91224B8FF000D5549E /* DataResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResponseModel.swift; sourceTree = "<group>"; };
 		F9327E94224B904100D5549E /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 		F95EA5EC22450F7D00D35DE7 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				F906E9932253DF46002FE3DA /* NetworkManager.swift */,
 				F95EA5EF22450FEA00D35DE7 /* Alamofire */,
 				F9327E90224B8F5000D5549E /* Commom */,
 				F9327E93224B901800D5549E /* Error */,
@@ -385,6 +388,7 @@
 				F95EA5DD2245028F00D35DE7 /* ViewController.swift in Sources */,
 				F906E97C22536528002FE3DA /* URLRouters.swift in Sources */,
 				F906E97E2253662F002FE3DA /* BaseDataStore.swift in Sources */,
+				F906E9942253DF46002FE3DA /* NetworkManager.swift in Sources */,
 				F9D8E0F52251B47C00979A73 /* DownloadableRequest.swift in Sources */,
 				F9327E8F224B8A1E00D5549E /* Networking.swift in Sources */,
 				F9327E95224B904100D5549E /* NetworkErrors.swift in Sources */,

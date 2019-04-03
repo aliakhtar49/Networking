@@ -30,4 +30,8 @@ extension Alamofire.DataRequest: DecodableRequest {
         validate(statusCode: validationType.statusCodes)
     }
     
+    func cancel() {
+        let _: Alamofire.DataRequest = cancel()
+    }
+    
 }

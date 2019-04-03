@@ -35,6 +35,11 @@ extension Alamofire.DownloadRequest: DownloadableRequest {
         validate(statusCode: validationType.statusCodes)
     }
     
+    
+    func cancel() {
+        let _: Alamofire.DownloadRequest = cancel()
+    }
+    
 }
 
 extension Alamofire.DownloadResponse: DownloadResponse {

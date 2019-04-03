@@ -11,7 +11,7 @@ import Alamofire
 
 
 protocol Request {
-
+    func cancel()
     func validate(validationType: ValidationType)
 }
 

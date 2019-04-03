@@ -9,7 +9,7 @@
 import Foundation
 
 
-protocol DecodableRequest: DataResponseable, CancelableRequest {
+protocol DecodableRequest: Request, DataResponseable {
     
     func responseDecodable<T: Codable>(completionHandler: @escaping DataResponseHandler<T>)
 }

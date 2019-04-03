@@ -14,7 +14,7 @@ typealias UploadProgressClosure = (Double) -> Void
 
 
 
-protocol UploadableRequest: CancelableRequest {
+protocol UploadableRequest: Request {
     func response(completion: @escaping UploadResponseClosure, progress: @escaping UploadProgressClosure)
 }
 

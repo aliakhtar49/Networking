@@ -11,11 +11,7 @@ import Alamofire
 
 
 extension Alamofire.DataRequest: DecodableRequest {
-   
-    func cancel() {
-        let _ : Alamofire.DataRequest = cancel()
-    }
-    
+
     func responseDecodable<T>(completionHandler: @escaping (DataResponseHandler<T>)) where T : Decodable {
         
         responseDecodable { (dataResponse : DataResponse<T>) in
@@ -29,4 +25,9 @@ extension Alamofire.DataRequest: DecodableRequest {
             completionHandler(response)
         }
     }
+    
+    func validate(validationType: ValidationType) {
+        validate(statusCode: validationType.statusCodes)
+    }
+    
 }

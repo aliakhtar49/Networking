@@ -12,9 +12,6 @@ import Alamofire
 
 extension Alamofire.DownloadRequest: DownloadableRequest {
     
-    func cancel() {
-        let _ : Alamofire.DownloadRequest = cancel()
-    }
     
     func response(completion: @escaping DownloadResponseClosure, progress: @escaping DownloadProgressClosure) {
         
@@ -28,8 +25,19 @@ extension Alamofire.DownloadRequest: DownloadableRequest {
         }
     }
     
+    
     func resume(data: Data, completion: @escaping DownloadResponseClosure, progress: @escaping DownloadProgressClosure) {
        // download(resumingWith: data).response(completion: completion, progress: progress) //Check
+    }
+    
+    
+    func validate(validationType: ValidationType) {
+        validate(statusCode: validationType.statusCodes)
+    }
+    
+    
+    func cancel() {
+        let _: Alamofire.DownloadRequest = cancel()
     }
     
 }

@@ -12,9 +12,7 @@ import Alamofire
 
 extension Alamofire.DataRequest: DecodableRequest {
    
-    func cancel() {
-        let _ : Alamofire.DataRequest = cancel()
-    }
+  
     
       private func convertResponseToDataResponseModel<T>(dataResponse : DataResponse<T>) ->
             DataResponseModel<T> {
@@ -38,4 +36,13 @@ extension Alamofire.DataRequest: DecodableRequest {
             completionHandler(self.convertResponseToDataResponseModel(dataResponse: dataResponse))
         }
     }
+    
+    func validate(validationType: ValidationType) {
+        validate(statusCode: validationType.statusCodes)
+    }
+    
+    func cancel() {
+        let _: Alamofire.DataRequest = cancel()
+    }
+    
 }

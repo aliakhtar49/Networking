@@ -9,7 +9,6 @@
 import Foundation
 import Alamofire
 
-
 extension Alamofire.DataRequest: DecodableRequest {
    
   

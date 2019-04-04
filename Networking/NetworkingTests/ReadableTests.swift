@@ -8,8 +8,6 @@
 
 import XCTest
 @testable import Networking
-@testable import Alamofire
-
 
 class ReadableTests: XCTestCase {
 
@@ -24,9 +22,8 @@ class ReadableTests: XCTestCase {
     func testBasicReadableRouter() {
         
         let router = User.get()
-        let responseModelResult = DataResponse<Int>.init(request: nil, response: nil, data: nil, metrics: nil, serializationDuration: 23, result:Result.init(value: 2, error: nil))
-
-      //  Xctest
+        
+        Xctest
         
     }
 

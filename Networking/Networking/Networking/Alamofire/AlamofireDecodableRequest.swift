@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-
+class Stub : Alam
 extension Alamofire.DataRequest: DecodableRequest {
    
   

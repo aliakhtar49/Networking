@@ -21,6 +21,7 @@ final class AlamofireManager {
 }
 
 extension AlamofireManager: Networking {
+    
     func response(_ urlRequest: RequestConvertible) -> DecodableRequest {
         
         let request = AlamofireRequestConverter(withRequest: urlRequest)

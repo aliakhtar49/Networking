@@ -65,7 +65,7 @@ public extension Readable {
     /// ````
     /// Router.User.get(params: "2")
     ///````
-    static func get(parameters: Parameters = [:], headers: Headers = nil, timeout: CFTimeInterval = 15.0, retry: Int = 1) -> RequestConvertible {
+    static func get(parameters: Parameters = [:], headers: Headers = nil, timeout: CFTimeInterval = 60.0, retry: Int = 1) -> RequestConvertible {
         let temp = Self.init()
         let route = "\(temp.route)"
         return RequestConverter(method: .get, route: route, parameters: parameters, headers: headers, timeout: timeout, retry: retry)
@@ -81,7 +81,7 @@ public extension Creatable {
     /// ````
     /// Router.User.create(parameters: ["username":"initFabian", "github":"https://github.com/initFabian"])
     ///````
-    static func create(parameters: Parameters = [:], headers: Headers = nil, timeout: CFTimeInterval = 15.0, retry: Int = 1) -> RequestConvertible {
+    static func create(parameters: Parameters = [:], headers: Headers = nil, timeout: CFTimeInterval = 60.0, retry: Int = 1) -> RequestConvertible {
         let temp = Self.init()
         let route = "\(temp.route)"
         
@@ -98,7 +98,7 @@ public extension Updatable {
     /// ````
     /// Router.User.update(params: "2", parameters: ["twitterURL":"https://twitter.com/initFabian"])
     ///````
-    static func update(parameters: Parameters = [:], headers: Headers = nil, timeout: CFTimeInterval = 15.0, retry: Int = 1) -> RequestConvertible {
+    static func update(parameters: Parameters = [:], headers: Headers = nil, timeout: CFTimeInterval = 60.0, retry: Int = 1) -> RequestConvertible {
         let temp = Self.init()
         return RequestConverter(method: .put, route: temp.route, parameters: parameters, headers: headers, timeout: timeout, retry: retry)
     }
@@ -113,7 +113,7 @@ public extension Patchable {
     /// ````
     /// Router.User.update(params: "2", parameters: ["twitterURL":"https://twitter.com/initFabian"])
     ///````
-    static func patch(parameters: Parameters = [:], headers: Headers = nil, timeout: CFTimeInterval = 15.0, retry: Int = 1) -> RequestConvertible {
+    static func patch(parameters: Parameters = [:], headers: Headers = nil, timeout: CFTimeInterval = 60.0, retry: Int = 1) -> RequestConvertible {
         let temp = Self.init()
         return RequestConverter(method: .patch, route: temp.route, parameters: parameters, headers: headers, timeout: timeout, retry: retry)
     }
@@ -128,7 +128,7 @@ public extension Deletable {
     /// ````
     /// Router.User.delete(params: "2")
     ///````
-    static func delete(params: String, headers: Headers = nil, timeout: CFTimeInterval = 15.0, retry: Int = 1) -> RequestConvertible {
+    static func delete(params: String, headers: Headers = nil, timeout: CFTimeInterval = 60.0, retry: Int = 1) -> RequestConvertible {
         let temp = Self.init()
         let route = "\(temp.route)/\(params)"
         

@@ -13,17 +13,20 @@ import Alamofire
 final class AlamofireManager {
     
     var sessionManager: Session
+    var requestGenerator: AlamofireRequestGenerator
     
-    public init(configuration: URLSessionConfiguration = URLSessionConfiguration.default ) {
+    public init(configuration: URLSessionConfiguration = URLSessionConfiguration.default, requestGenerator: AlamofireRequestGenerator = AlamofireRequestGenerator() ) {
         
         self.sessionManager = Alamofire.Session(configuration: configuration)
+        self.requestGenerator = requestGenerator
     }
 }
 
 extension AlamofireManager: Networking {
+    
     func response(_ urlRequest: RequestConvertible) -> DecodableRequest {
         
-        let request = AlamofireRequestConverter(withRequest: urlRequest)
+        let request = requestGenerator.getURLRequestConvertible(from: urlRequest)
         return sessionManager.request(request)
     }
     
@@ -37,13 +40,13 @@ extension AlamofireManager: Networking {
     
     func download(_ urlRequest: RequestConvertible) -> DownloadableRequest {
         
-        let request = AlamofireRequestConverter(withRequest: urlRequest)
+        let request = requestGenerator.getURLRequestConvertible(from: urlRequest)
         return sessionManager.download(request)
     }
     
     func upload(file url: URL, with urlRequest: RequestConvertible) -> UploadableRequest {
         
-        let request = AlamofireRequestConverter(withRequest: urlRequest)
+        let request = requestGenerator.getURLRequestConvertible(from: urlRequest)
         return sessionManager.upload(url, with: request)
     }
 }

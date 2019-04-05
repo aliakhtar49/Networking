@@ -37,3 +37,16 @@ struct AlamofireRequestConverter: URLRequestConvertible {
         return urlRequest
     }
 }
+
+struct AlamofireRequestGenerator {
+    
+    init() {
+        
+    }
+    
+    public func getURLRequestConvertible(from requestConvertible: RequestConvertible) -> URLRequestConvertible {
+        
+        let urlRequestConvertible = AlamofireRequestConverter(withRequest: requestConvertible)
+        return urlRequestConvertible
+    }
+}

@@ -33,6 +33,14 @@ public protocol Deletable: Routable {}
 /// Allows a route to perform the `.patch` method
 public protocol Patchable: Routable {}
 
+/// Allows a route to perform the download
+public protocol Downloadable: Routable {}
+
+/// Allows a route to perform the upload
+public protocol Uploadable: Routable {}
+
+
+
 extension Routable {
 
     /// Create instance of Object that conforms to Routable
@@ -133,6 +141,36 @@ public extension Deletable {
         let route = "\(temp.route)/\(params)"
         
         return RequestConverter(method: .delete, route: route, headers: headers, timeout: timeout, retry: retry)
+    }
+}
+
+public extension Downloadable {
+    
+    /// Method that allows route to return an object
+    ///
+    /// - Parameter params: Parameters of the object that is being returned
+    /// - Returns: `URLRequestConvertible` object to play nicely with Alamofire
+    /// ````
+    ///````
+    static func create(method: HTTPMethod = .get, parameters: Parameters = [:], headers: Headers = nil, timeout: CFTimeInterval = 60.0, retry: Int = 1) -> RequestConvertible {
+        let temp = Self.init()
+        let route = "\(temp.route)"
+        return RequestConverter(method: method, route: route, parameters: parameters, headers: headers, timeout: timeout, retry: retry)
+    }
+}
+
+public extension Uploadable {
+    
+    /// Method that allows route to return an object
+    ///
+    /// - Parameter params: Parameters of the object that is being returned
+    /// - Returns: `URLRequestConvertible` object to play nicely with Alamofire
+    /// ````
+    ///````
+    static func create(method: HTTPMethod = .get, parameters: Parameters = [:], headers: Headers = nil, timeout: CFTimeInterval = 60.0, retry: Int = 1) -> RequestConvertible {
+        let temp = Self.init()
+        let route = "\(temp.route)"
+        return RequestConverter(method: method, route: route, parameters: parameters, headers: headers, timeout: timeout, retry: retry)
     }
 }
 

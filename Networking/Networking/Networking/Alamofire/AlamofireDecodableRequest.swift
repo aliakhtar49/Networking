@@ -9,25 +9,23 @@
 import Foundation
 import Alamofire
 
-extension Alamofire.DataRequest: DecodableRequest {
-   
-  
+extension Alamofire.DataRequest: DecodableRequest{
     
-      private func convertResponseToDataResponseModel<T>(dataResponse : DataResponse<T>) ->
-            DataResponseModel<T> {
+    private func convertResponseToDataResponseModel<T>(dataResponse : DataResponse<T>) ->
+        DataResponseModel<T> {
             
-                switch (dataResponse.value,dataResponse.error) {
-                    
-                case let (.some(value), nil):
-                   return  DataResponseModel<T>(result: .success(value))
-                    
-               case let (nil, .some(error)):
-                  return  DataResponseModel<T>(result: .failure(NetworkErrors.underlying(error)))
-    
-                default:
-                    let error = NSError(domain:NSURLErrorDomain, code:NSURLErrorUnknown, userInfo:nil)
-                     return  DataResponseModel<T>(result: .failure(NetworkErrors.underlying(error)))
-                }
+            switch (dataResponse.value,dataResponse.error) {
+                
+            case let (.some(value), nil):
+                return  DataResponseModel<T>(result: .success(value))
+                
+            case let (nil, .some(error)):
+                return  DataResponseModel<T>(result: .failure(NetworkErrors.underlying(error)))
+                
+            default:
+                let error = NSError(domain:NSURLErrorDomain, code:NSURLErrorUnknown, userInfo:nil)
+                return  DataResponseModel<T>(result: .failure(NetworkErrors.underlying(error)))
+            }
     }
     func responseDecodable<T>(completionHandler: @escaping (DataResponseHandler<T>)) where T : Decodable {
         

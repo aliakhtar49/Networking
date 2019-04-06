@@ -25,8 +25,3 @@ extension Alamofire.UploadRequest: UploadableRequest {
         }
     }
 }
-
-//Check
-//extension Alamofire.DefaultDataResponse: UploadResponse {
-//    
-//}

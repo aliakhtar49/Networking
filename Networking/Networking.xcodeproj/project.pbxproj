@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AD61F7C2257652800363ED2 /* DataRequest+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD61F7B2257652800363ED2 /* DataRequest+Decodable.swift */; };
+		3AD61F7E225766D200363ED2 /* DataRequestMockClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD61F7D225766D200363ED2 /* DataRequestMockClass.swift */; };
+		3AD61F80225768E600363ED2 /* DecodableRequestMockClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD61F7F225768E600363ED2 /* DecodableRequestMockClass.swift */; };
+		3AD61F83225769C600363ED2 /* AlamofireDecodableRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD61F82225769C600363ED2 /* AlamofireDecodableRequestTests.swift */; };
+		3AD61F8622576D1600363ED2 /* AlamofireDecodableRequestStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD61F8522576D1600363ED2 /* AlamofireDecodableRequestStubs.swift */; };
+		3AD61F8922576E1F00363ED2 /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD61F8822576E1F00363ED2 /* DTO.swift */; };
 		51148A2E22539A540087A0AB /* ValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51148A2D22539A540087A0AB /* ValidationType.swift */; };
 		51148A3022539D790087A0AB /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51148A2F22539D790087A0AB /* Request.swift */; };
 		9323EC54050B994083D0CF4E /* Pods_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF0FE02145F50851B474C9E /* Pods_Networking.framework */; };
@@ -50,6 +56,12 @@
 /* Begin PBXFileReference section */
 		2C9C3FC24D6A9C032076BEE9 /* Pods-NetworkingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkingTests.release.xcconfig"; path = "Target Support Files/Pods-NetworkingTests/Pods-NetworkingTests.release.xcconfig"; sourceTree = "<group>"; };
 		35FD4D7AA98A41A3632177AD /* Pods_NetworkingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AD61F7B2257652800363ED2 /* DataRequest+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequest+Decodable.swift"; sourceTree = "<group>"; };
+		3AD61F7D225766D200363ED2 /* DataRequestMockClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequestMockClass.swift; sourceTree = "<group>"; };
+		3AD61F7F225768E600363ED2 /* DecodableRequestMockClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableRequestMockClass.swift; sourceTree = "<group>"; };
+		3AD61F82225769C600363ED2 /* AlamofireDecodableRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireDecodableRequestTests.swift; sourceTree = "<group>"; };
+		3AD61F8522576D1600363ED2 /* AlamofireDecodableRequestStubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireDecodableRequestStubs.swift; sourceTree = "<group>"; };
+		3AD61F8822576E1F00363ED2 /* DTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTO.swift; sourceTree = "<group>"; };
 		4B7B05837526C4CDE9993E5D /* Pods-NetworkingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkingTests.debug.xcconfig"; path = "Target Support Files/Pods-NetworkingTests/Pods-NetworkingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		51148A2D22539A540087A0AB /* ValidationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationType.swift; sourceTree = "<group>"; };
 		51148A2F22539D790087A0AB /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
@@ -115,6 +127,59 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3AD61F78225762C700363ED2 /* Alamofire Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3AD61F8722576DF700363ED2 /* DTO  */,
+				3AD61F8422576CC500363ED2 /* Stub */,
+				3AD61F812257698C00363ED2 /* Tests */,
+				3AD61F7A2257650200363ED2 /* Extenions */,
+				3AD61F79225762E000363ED2 /* Mock */,
+			);
+			path = "Alamofire Tests";
+			sourceTree = "<group>";
+		};
+		3AD61F79225762E000363ED2 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				3AD61F7D225766D200363ED2 /* DataRequestMockClass.swift */,
+				3AD61F7F225768E600363ED2 /* DecodableRequestMockClass.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		3AD61F7A2257650200363ED2 /* Extenions */ = {
+			isa = PBXGroup;
+			children = (
+				3AD61F7B2257652800363ED2 /* DataRequest+Decodable.swift */,
+			);
+			path = Extenions;
+			sourceTree = "<group>";
+		};
+		3AD61F812257698C00363ED2 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3AD61F82225769C600363ED2 /* AlamofireDecodableRequestTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		3AD61F8422576CC500363ED2 /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				3AD61F8522576D1600363ED2 /* AlamofireDecodableRequestStubs.swift */,
+			);
+			path = Stub;
+			sourceTree = "<group>";
+		};
+		3AD61F8722576DF700363ED2 /* DTO  */ = {
+			isa = PBXGroup;
+			children = (
+				3AD61F8822576E1F00363ED2 /* DTO.swift */,
+			);
+			path = "DTO ";
+			sourceTree = "<group>";
+		};
 		51148A2C22539A270087A0AB /* ValidationType */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +202,7 @@
 		F906E98822537E5B002FE3DA /* NetworkingTests */ = {
 			isa = PBXGroup;
 			children = (
+				3AD61F78225762C700363ED2 /* Alamofire Tests */,
 				F906E98922537E5B002FE3DA /* NetworkingTests.swift */,
 				F906E98B22537E5B002FE3DA /* Info.plist */,
 				F906E99122538035002FE3DA /* ReadableTests.swift */,
@@ -432,8 +498,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AD61F80225768E600363ED2 /* DecodableRequestMockClass.swift in Sources */,
 				F906E98A22537E5B002FE3DA /* NetworkingTests.swift in Sources */,
+				3AD61F8622576D1600363ED2 /* AlamofireDecodableRequestStubs.swift in Sources */,
+				3AD61F8922576E1F00363ED2 /* DTO.swift in Sources */,
+				3AD61F83225769C600363ED2 /* AlamofireDecodableRequestTests.swift in Sources */,
 				F906E99222538035002FE3DA /* ReadableTests.swift in Sources */,
+				3AD61F7C2257652800363ED2 /* DataRequest+Decodable.swift in Sources */,
+				3AD61F7E225766D200363ED2 /* DataRequestMockClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

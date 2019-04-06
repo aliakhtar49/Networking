@@ -7,8 +7,11 @@
 //
 
 import Foundation
+import Alamofire
 
 
+
+    
 protocol DecodableRequest: Request, DataResponseable {
     
     func responseDecodable<T: Codable>(completionHandler: @escaping DataResponseHandler<T>)

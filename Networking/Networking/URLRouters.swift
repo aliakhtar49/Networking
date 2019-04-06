@@ -25,6 +25,16 @@ struct URLRouters {
     struct Terms: Readable, Patchable {
         var route: String = "agreements/current"
     }
+    struct ToDo: Readable {
+        var route: String = "https://jsonplaceholder.typicode.com/todos/1"
+        
+        
+    }
+    struct Post: Readable {
+        var route: String = "https://jsonplaceholder.typicode.com/posts"
+        
+        
+    }
 }
 
 

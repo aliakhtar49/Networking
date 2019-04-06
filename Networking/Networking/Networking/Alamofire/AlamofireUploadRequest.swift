@@ -17,11 +17,16 @@ extension Alamofire.UploadRequest: UploadableRequest {
         
         response { (dataResponse) in
             
-            let uploadResponse = dataResponse as! UploadResponse //Check
+            let uploadResponse = dataResponse as UploadResponse
             completion(uploadResponse)
             
             }.uploadProgress { (uploadProgress) in
                 progress(uploadProgress.fractionCompleted)
         }
     }
+}
+
+
+extension Alamofire.DataResponse: UploadResponse {
+
 }

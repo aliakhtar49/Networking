@@ -99,7 +99,7 @@ class AlamofireDecodableRequestTests: XCTestCase {
             case .success( _):
                 XCTFail()
             case .failure(let error):
-                XCTAssertTrue(error.localizedDescription == "Encoding failed due to a missing request component: url")
+                XCTAssertTrue(error.localizedDescription == "The underlying encoder failed with the error: Error Domain=NSURLErrorDomain Code=-1 \"(null)\"")
                 
             }
             

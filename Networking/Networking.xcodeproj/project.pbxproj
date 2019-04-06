@@ -21,8 +21,11 @@
 		F906E97E2253662F002FE3DA /* BaseDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906E97D2253662F002FE3DA /* BaseDataStore.swift */; };
 		F906E980225366F0002FE3DA /* FavoriteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906E97F225366F0002FE3DA /* FavoriteDataStore.swift */; };
 		F906E98A22537E5B002FE3DA /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906E98922537E5B002FE3DA /* NetworkingTests.swift */; };
-		F906E99222538035002FE3DA /* ReadableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906E99122538035002FE3DA /* ReadableTests.swift */; };
 		F906E9942253DF46002FE3DA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906E9932253DF46002FE3DA /* NetworkManager.swift */; };
+		F906E9D222561CA2002FE3DA /* ReadableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906E9D122561CA2002FE3DA /* ReadableTests.swift */; };
+		F906E9D422562425002FE3DA /* CreatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906E9D322562425002FE3DA /* CreatableTests.swift */; };
+		F906E9D62256250A002FE3DA /* UpdatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906E9D52256250A002FE3DA /* UpdatableTests.swift */; };
+		F906E9D822562C12002FE3DA /* PatchableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906E9D722562C12002FE3DA /* PatchableTests.swift */; };
 		F9327E8F224B8A1E00D5549E /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9327E8E224B8A1E00D5549E /* Networking.swift */; };
 		F9327E92224B8FF000D5549E /* DataResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9327E91224B8FF000D5549E /* DataResponseModel.swift */; };
 		F9327E95224B904100D5549E /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9327E94224B904100D5549E /* NetworkErrors.swift */; };
@@ -74,8 +77,11 @@
 		F906E98722537E5B002FE3DA /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F906E98922537E5B002FE3DA /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		F906E98B22537E5B002FE3DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F906E99122538035002FE3DA /* ReadableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadableTests.swift; sourceTree = "<group>"; };
 		F906E9932253DF46002FE3DA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F906E9D122561CA2002FE3DA /* ReadableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadableTests.swift; sourceTree = "<group>"; };
+		F906E9D322562425002FE3DA /* CreatableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatableTests.swift; sourceTree = "<group>"; };
+		F906E9D52256250A002FE3DA /* UpdatableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatableTests.swift; sourceTree = "<group>"; };
+		F906E9D722562C12002FE3DA /* PatchableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchableTests.swift; sourceTree = "<group>"; };
 		F9327E8E224B8A1E00D5549E /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		F9327E91224B8FF000D5549E /* DataResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResponseModel.swift; sourceTree = "<group>"; };
 		F9327E94224B904100D5549E /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
@@ -203,11 +209,22 @@
 			isa = PBXGroup;
 			children = (
 				3AD61F78225762C700363ED2 /* Alamofire Tests */,
+				F906E9D022561C74002FE3DA /* RouterProtocol */,
 				F906E98922537E5B002FE3DA /* NetworkingTests.swift */,
 				F906E98B22537E5B002FE3DA /* Info.plist */,
-				F906E99122538035002FE3DA /* ReadableTests.swift */,
 			);
 			path = NetworkingTests;
+			sourceTree = "<group>";
+		};
+		F906E9D022561C74002FE3DA /* RouterProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				F906E9D122561CA2002FE3DA /* ReadableTests.swift */,
+				F906E9D322562425002FE3DA /* CreatableTests.swift */,
+				F906E9D52256250A002FE3DA /* UpdatableTests.swift */,
+				F906E9D722562C12002FE3DA /* PatchableTests.swift */,
+			);
+			path = RouterProtocol;
 			sourceTree = "<group>";
 		};
 		F9327E8D224B89DA00D5549E /* Protocols */ = {
@@ -499,6 +516,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AD61F80225768E600363ED2 /* DecodableRequestMockClass.swift in Sources */,
+				F906E9D62256250A002FE3DA /* UpdatableTests.swift in Sources */,
+				F906E9D822562C12002FE3DA /* PatchableTests.swift in Sources */,
 				F906E98A22537E5B002FE3DA /* NetworkingTests.swift in Sources */,
 				3AD61F8622576D1600363ED2 /* AlamofireDecodableRequestStubs.swift in Sources */,
 				3AD61F8922576E1F00363ED2 /* DTO.swift in Sources */,
@@ -506,6 +525,8 @@
 				F906E99222538035002FE3DA /* ReadableTests.swift in Sources */,
 				3AD61F7C2257652800363ED2 /* DataRequest+Decodable.swift in Sources */,
 				3AD61F7E225766D200363ED2 /* DataRequestMockClass.swift in Sources */,
+				F906E9D422562425002FE3DA /* CreatableTests.swift in Sources */,
+				F906E9D222561CA2002FE3DA /* ReadableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

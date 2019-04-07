@@ -13,17 +13,22 @@ import Alamofire
 
 extension Alamofire.UploadRequest: UploadableRequest {
     
-    func response(completion: @escaping UploadResponseClosure, progress: @escaping UploadProgressClosure) {
+    func response(completion: @escaping UploadResponseClosure) {
         
-        response { (dataResponse) in
-            
+        let _: Alamofire.UploadRequest = response { (dataResponse) in
             let uploadResponse = dataResponse as UploadResponse
             completion(uploadResponse)
             
-            }.uploadProgress { (uploadProgress) in
-                progress(uploadProgress.fractionCompleted)
         }
     }
+    
+    func progress(_ progress: @escaping UploadProgressClosure) {
+        
+        uploadProgress { (uploadProgress) in
+            progress(uploadProgress.fractionCompleted)
+        }
+    }
+    
 }
 
 

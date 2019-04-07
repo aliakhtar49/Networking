@@ -14,8 +14,9 @@ typealias DownloadProgressClosure = (Double) -> Void
 
 protocol DownloadableRequest: Request {
     
-    func response(completion: @escaping DownloadResponseClosure, progress: @escaping DownloadProgressClosure)
-    func resume(data: Data, completion: @escaping DownloadResponseClosure, progress: @escaping DownloadProgressClosure)
+    func response(completion: @escaping DownloadResponseClosure)
+    func progress(_ progress: @escaping DownloadProgressClosure)
+    func resume(data: Data, completion: @escaping DownloadResponseClosure)
 }
 
 protocol DownloadResponse {

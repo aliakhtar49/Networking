@@ -15,3 +15,6 @@ let todoStubModel = DTO.TodoDTO(userId: 1, id: 1, title: "mockTitle", completed:
 let responseModelSuccessStub = DataResponse<DTO.TodoDTO>.init(request: nil, response: nil, data: nil, metrics: nil, serializationDuration: 23, result:.success(todoStubModel))
 
 let responseModelFailureStubWithMissingUrl = DataResponse<DTO.TodoDTO>.init(request: nil, response: nil, data: nil, metrics: nil, serializationDuration: 23, result:.failure(AFError.parameterEncodingFailed(reason: .missingURL)))
+
+
+ let mockJSONDataForDecodableSuccessCase = "{\"userId\": 1,\"id\": 1,\"title\": \"delectus aut autem\",\"completed\": false}".data(using: .utf8)!

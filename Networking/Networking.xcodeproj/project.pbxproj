@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A85D4432259D47E006A0E46 /* AlamofireDecodableRequestIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85D4422259D47E006A0E46 /* AlamofireDecodableRequestIntegrationTests.swift */; };
+		3A85D4452259DBBC006A0E46 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85D4442259DBBC006A0E46 /* MockURLProtocol.swift */; };
+		3A85D4472259DC95006A0E46 /* MockBaseDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85D4462259DC95006A0E46 /* MockBaseDataStore.swift */; };
+		3A85D4492259DCF5006A0E46 /* IntegrationTestingClassMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85D4482259DCF5006A0E46 /* IntegrationTestingClassMock.swift */; };
+		3A85D44B225B1BC3006A0E46 /* AlamofireManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85D44A225B1BC3006A0E46 /* AlamofireManagerTests.swift */; };
+		3A85D44D225B2977006A0E46 /* MockAlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85D44C225B2977006A0E46 /* MockAlamofireManager.swift */; };
+		3A85D44F225B2B10006A0E46 /* MockConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85D44E225B2B10006A0E46 /* MockConfiguration.swift */; };
 		3AD61F7C2257652800363ED2 /* DataRequest+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD61F7B2257652800363ED2 /* DataRequest+Decodable.swift */; };
 		3AD61F7E225766D200363ED2 /* DataRequestMockClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD61F7D225766D200363ED2 /* DataRequestMockClass.swift */; };
 		3AD61F80225768E600363ED2 /* DecodableRequestMockClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD61F7F225768E600363ED2 /* DecodableRequestMockClass.swift */; };
@@ -59,6 +66,13 @@
 /* Begin PBXFileReference section */
 		2C9C3FC24D6A9C032076BEE9 /* Pods-NetworkingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkingTests.release.xcconfig"; path = "Target Support Files/Pods-NetworkingTests/Pods-NetworkingTests.release.xcconfig"; sourceTree = "<group>"; };
 		35FD4D7AA98A41A3632177AD /* Pods_NetworkingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A85D4422259D47E006A0E46 /* AlamofireDecodableRequestIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireDecodableRequestIntegrationTests.swift; sourceTree = "<group>"; };
+		3A85D4442259DBBC006A0E46 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		3A85D4462259DC95006A0E46 /* MockBaseDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBaseDataStore.swift; sourceTree = "<group>"; };
+		3A85D4482259DCF5006A0E46 /* IntegrationTestingClassMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationTestingClassMock.swift; sourceTree = "<group>"; };
+		3A85D44A225B1BC3006A0E46 /* AlamofireManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireManagerTests.swift; sourceTree = "<group>"; };
+		3A85D44C225B2977006A0E46 /* MockAlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAlamofireManager.swift; sourceTree = "<group>"; };
+		3A85D44E225B2B10006A0E46 /* MockConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConfiguration.swift; sourceTree = "<group>"; };
 		3AD61F7B2257652800363ED2 /* DataRequest+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequest+Decodable.swift"; sourceTree = "<group>"; };
 		3AD61F7D225766D200363ED2 /* DataRequestMockClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequestMockClass.swift; sourceTree = "<group>"; };
 		3AD61F7F225768E600363ED2 /* DecodableRequestMockClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableRequestMockClass.swift; sourceTree = "<group>"; };
@@ -133,9 +147,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3A85D4412259D447006A0E46 /* Integration Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3A85D4422259D47E006A0E46 /* AlamofireDecodableRequestIntegrationTests.swift */,
+			);
+			path = "Integration Tests";
+			sourceTree = "<group>";
+		};
 		3AD61F78225762C700363ED2 /* Alamofire Tests */ = {
 			isa = PBXGroup;
 			children = (
+				3A85D4412259D447006A0E46 /* Integration Tests */,
 				3AD61F8722576DF700363ED2 /* DTO  */,
 				3AD61F8422576CC500363ED2 /* Stub */,
 				3AD61F812257698C00363ED2 /* Tests */,
@@ -150,6 +173,11 @@
 			children = (
 				3AD61F7D225766D200363ED2 /* DataRequestMockClass.swift */,
 				3AD61F7F225768E600363ED2 /* DecodableRequestMockClass.swift */,
+				3A85D4442259DBBC006A0E46 /* MockURLProtocol.swift */,
+				3A85D4462259DC95006A0E46 /* MockBaseDataStore.swift */,
+				3A85D4482259DCF5006A0E46 /* IntegrationTestingClassMock.swift */,
+				3A85D44C225B2977006A0E46 /* MockAlamofireManager.swift */,
+				3A85D44E225B2B10006A0E46 /* MockConfiguration.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -166,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				3AD61F82225769C600363ED2 /* AlamofireDecodableRequestTests.swift */,
+				3A85D44A225B1BC3006A0E46 /* AlamofireManagerTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -519,13 +548,19 @@
 				F906E9D62256250A002FE3DA /* UpdatableTests.swift in Sources */,
 				F906E9D822562C12002FE3DA /* PatchableTests.swift in Sources */,
 				F906E98A22537E5B002FE3DA /* NetworkingTests.swift in Sources */,
+				3A85D44B225B1BC3006A0E46 /* AlamofireManagerTests.swift in Sources */,
 				3AD61F8622576D1600363ED2 /* AlamofireDecodableRequestStubs.swift in Sources */,
 				3AD61F8922576E1F00363ED2 /* DTO.swift in Sources */,
 				3AD61F83225769C600363ED2 /* AlamofireDecodableRequestTests.swift in Sources */,
-				F906E99222538035002FE3DA /* ReadableTests.swift in Sources */,
+				3A85D44D225B2977006A0E46 /* MockAlamofireManager.swift in Sources */,
+				3A85D4452259DBBC006A0E46 /* MockURLProtocol.swift in Sources */,
+				3A85D4472259DC95006A0E46 /* MockBaseDataStore.swift in Sources */,
 				3AD61F7C2257652800363ED2 /* DataRequest+Decodable.swift in Sources */,
+				3A85D44F225B2B10006A0E46 /* MockConfiguration.swift in Sources */,
 				3AD61F7E225766D200363ED2 /* DataRequestMockClass.swift in Sources */,
+				3A85D4432259D47E006A0E46 /* AlamofireDecodableRequestIntegrationTests.swift in Sources */,
 				F906E9D422562425002FE3DA /* CreatableTests.swift in Sources */,
+				3A85D4492259DCF5006A0E46 /* IntegrationTestingClassMock.swift in Sources */,
 				F906E9D222561CA2002FE3DA /* ReadableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

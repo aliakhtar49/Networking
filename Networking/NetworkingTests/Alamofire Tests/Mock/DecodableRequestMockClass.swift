@@ -43,6 +43,7 @@ class DecodableRequestMockClass<T>: DecodableRequest {
                 return  DataResponseModel<T>(result: .failure(NetworkErrors.underlying(error)))
             }
     }
+    
 
     func cancel() {
 

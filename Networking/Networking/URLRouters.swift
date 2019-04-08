@@ -26,14 +26,19 @@ struct URLRouters {
         var route: String = "agreements/current"
     }
     struct ToDo: Readable {
-        var route: String = "https://jsonplaceholder.typicode.com/todos/1"
+        var route: String = "https://jsonplaceholder.typicode.com/todos/ddddd1"
         
         
     }
     struct Post: Readable {
         var route: String = "https://jsonplaceholder.typicode.com/posts"
         
-        
+    }
+    struct EmptyRouter: Readable {
+        var route: String = ""
+    }
+    struct UrlNotFoundRouter: Readable {
+        var route: String = "https://no_url_exists.com"
     }
 }
 

@@ -47,10 +47,10 @@ extension FavoriteDataStore: FavoriteDataStoreProtocol {
 
 
 struct ToDoDTO: Codable {
-    var userId: Int
-    var id: Int
+   // var userId: Int
+//    var id: Int
     var title: String
-    var completed: Bool
+   // var completed: Bool
 }
 struct PostDTO: Codable {
     var userId: Int

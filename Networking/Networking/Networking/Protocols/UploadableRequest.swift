@@ -15,7 +15,8 @@ typealias UploadProgressClosure = (Double) -> Void
 
 
 protocol UploadableRequest: Request {
-    func response(completion: @escaping UploadResponseClosure, progress: @escaping UploadProgressClosure)
+    func response(completion: @escaping UploadResponseClosure)
+    func progress(_ progress: @escaping UploadProgressClosure)
 }
 
 protocol UploadResponse {

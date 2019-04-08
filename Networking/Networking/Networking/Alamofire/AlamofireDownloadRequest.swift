@@ -13,23 +13,24 @@ import Alamofire
 extension Alamofire.DownloadRequest: DownloadableRequest {
     
     
-    func response(completion: @escaping DownloadResponseClosure, progress: @escaping DownloadProgressClosure) {
-        
-        response { (response) in
-            
+    func response(completion: @escaping DownloadResponseClosure) {
+        let _ :Alamofire.DownloadRequest = response { (response) in
             let downloadResponse = response as DownloadResponse
             completion(downloadResponse)
-            
-            }.downloadProgress { (downloadProgress) in
-                progress(downloadProgress.fractionCompleted)
         }
     }
     
     
-    func resume(data: Data, completion: @escaping DownloadResponseClosure, progress: @escaping DownloadProgressClosure) {
-            
+    func progress(_ progress: @escaping DownloadProgressClosure) {
+        downloadProgress { (downloadProgress) in
+            progress(downloadProgress.fractionCompleted)
+        }
     }
     
+    
+    func resume(data: Data, completion: @escaping DownloadResponseClosure) {
+            
+    }
     
     func validate(validationType: ValidationType) {
         validate(statusCode: validationType.statusCodes)

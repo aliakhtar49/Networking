@@ -17,6 +17,15 @@ extension Alamofire.UploadRequest: UploadableRequest {
         
         let _: Alamofire.UploadRequest = response { (dataResponse) in
             let uploadResponse = dataResponse as UploadResponse
+            if let data = dataResponse.data {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+                    print(json)
+                }catch {
+                    print(error)
+                }
+            }
+
             completion(uploadResponse)
             
         }

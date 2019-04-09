@@ -71,9 +71,9 @@ final class NetworkManager {
     ///
     /// - Returns:                             The created `DownloadableRequest`.
     
-    func download(_ urlRequest: RequestConvertible) -> DownloadableRequest {
+    func download(_ urlRequest: RequestConvertible, to destinationURL: URL? = nil) -> DownloadableRequest {
         
-        return manager.download(urlRequest)
+        return manager.download(urlRequest, to: destinationURL)
     }
     
     

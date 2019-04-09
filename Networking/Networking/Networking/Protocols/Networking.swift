@@ -14,6 +14,6 @@ protocol Networking {
     
     func response(_ urlRequest: RequestConvertible) -> DecodableRequest
     func update(withHeaders headers: Headers)
-    func download(_ urlRequest: RequestConvertible) -> DownloadableRequest
+    func download(_ urlRequest: RequestConvertible, to destinationURL: URL?) -> DownloadableRequest
     func upload(file url: URL, with urlRequest: RequestConvertible) -> UploadableRequest
 }

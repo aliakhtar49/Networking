@@ -65,12 +65,10 @@ extension AlamofireManager: Networking {
     }
     func upload(mulitpart: MultipartFormData, with urlRequest: RequestConvertible) -> UploadableRequest {
        
-      
-        
         let request = requestGenerator.getURLRequestConvertible(from: urlRequest)
         return sessionManager.upload(multipartFormData: { (mutlipartForm) in
         mutlipartForm.append(urlRequest.parameters.description.data(using: .utf8)!, withName: "description")
-        mutlipartForm.append(imgData!, withName: "image")
+        mutlipartForm.append(mulitpart.data, withName: mulitpart.name)
         }, with: request)
     }
 }

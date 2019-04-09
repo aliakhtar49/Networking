@@ -81,7 +81,7 @@ class ViewController: UIViewController {
         let path = Bundle.main.path(forResource: "imageOne", ofType: "png")
         let url = URL(string: path!)
         let requestConvertible = RecipeImageRoute.create(parameters: parameters, headers:headersCustom)
-        let downloadRequest = alamofireManager.upload(mulitpart: MultipartFormData(provider: .data(imgData!), name: "image"), with: requestConvertible)
+        let downloadRequest = alamofireManager.upload(mulitpart: MultipartFormData(data: imgData!, name: "image"), with: requestConvertible)
         downloadRequest.response { (dataResponse) in
             print(dataResponse.data)
              print(dataResponse.error)

@@ -15,15 +15,15 @@ struct MultipartFormData {
         case data(Foundation.Data)
     }
     
-    public init(provider: FormDataProvider, name: String, fileName: String? = nil, mimeType: String? = nil) {
-        self.provider = provider
+    public init(data: Foundation.Data, name: String, fileName: String? = nil, mimeType: String? = nil) {
+        self.data = data
         self.name = name
         self.fileName = fileName
         self.mimeType = mimeType
     }
     
     /// The method being used for providing form data.
-    public let provider: FormDataProvider
+    public let data: Foundation.Data
     
     /// The name.
     public let name: String

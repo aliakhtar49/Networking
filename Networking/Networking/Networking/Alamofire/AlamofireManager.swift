@@ -15,8 +15,7 @@ final class AlamofireManager {
     var sessionManager: Session
     var requestGenerator: AlamofireRequestGenerator
     
-    public init(configuration: URLSessionConfiguration = URLSessionConfiguration.default, requestGenerator: AlamofireRequestGenerator = AlamofireRequestGenerator() ) {
-        
+    public init(configuration: URLSessionConfiguration = URLSessionConfiguration.default, requestGenerator: AlamofireRequestGenerator = AlamofireRequestGenerator()) {
         self.sessionManager = Alamofire.Session(configuration: configuration)
         self.requestGenerator = requestGenerator
     }
@@ -24,11 +23,14 @@ final class AlamofireManager {
 
 extension AlamofireManager: Networking {
     
+    
+    
     func response(_ urlRequest: RequestConvertible) -> DecodableRequest {
         
         let request = requestGenerator.getURLRequestConvertible(from: urlRequest)
         return sessionManager.request(request)
     }
+    
     
     func update(withHeaders headers: Headers) {
         
@@ -38,11 +40,23 @@ extension AlamofireManager: Networking {
         sessionManager = Alamofire.Session(configuration: configuration)
     }
     
-    func download(_ urlRequest: RequestConvertible) -> DownloadableRequest {
+    
+    
+    func download(_ urlRequest: RequestConvertible, to destinationURL: URL? = nil) -> DownloadableRequest {
         
         let request = requestGenerator.getURLRequestConvertible(from: urlRequest)
-        return sessionManager.download(request)
+        
+        var destination: DownloadRequest.Destination?
+        
+        if let destinationURL = destinationURL {
+            destination = { (url, response) -> (destinationURL: URL, options: DownloadRequest.Options) in
+                return (destinationURL, [.removePreviousFile, .createIntermediateDirectories])
+            }
+        }
+        return sessionManager.download(request, interceptor: nil, to: destination)
     }
+    
+    
     
     func upload(file url: URL, with urlRequest: RequestConvertible) -> UploadableRequest {
         
